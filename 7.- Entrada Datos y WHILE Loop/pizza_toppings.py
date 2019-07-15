@@ -21,5 +21,3 @@ while topping != 'quit':
     print('Has elegido añadir ' + topping + ' a tu pizza.')
     # Volvemos a preguntar para MODIFICAR la CONDICION de SALIDA
     topping = input('Elige los topping para tu pizza: ')
-
-
