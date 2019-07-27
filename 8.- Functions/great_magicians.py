@@ -1,24 +1,20 @@
 magicians = ['mago1', 'mago2', 'mago3', 'mago4']
 aux_magicians = []
 
-'''
-def make_great(lista):
-    Para EDITAR los elementos de una LISTA, NO SE DEBE UTILIZAR
-    un BUCLE "FOR", la EDICION DEBE REALIZARSE con un BUCLE "WHILE"
-    '''
-    '''
-    for magician in lista:
-        pass
-    '''
-    '''
-    Una de las formas de poder hacerlo es con un INDICE y la LONGITUD de la LISTA
-    en un BUCLE WHILE
+# def make_great(lista):
+    # Para EDITAR los elementos de una LISTA, NO SE DEBE UTILIZAR
+    # un BUCLE "FOR", la EDICION DEBE REALIZARSE con un BUCLE "WHILE"
+    
+    #for magician in lista:
+        #pass
+    
+    #Una de las formas de poder hacerlo es con un INDICE y la LONGITUD de la LISTA
+    #en un BUCLE WHILE
 
-    index = 0
-    while index < len(lista):
-        lista[index] = 'The Great ' + lista[index]
-        index += 1
-'''
+    #index = 0
+    #while index < len(lista):
+        #lista[index] = 'The Great ' + lista[index]
+        #index += 1
 
 '''
 Otra forma es partiendo de la LISTA ORIGEN, utilizar una LISTA SECUNDARIA.
