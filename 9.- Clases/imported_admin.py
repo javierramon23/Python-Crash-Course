@@ -1,0 +1,18 @@
+# Cuando se IMPORTA una CLASE de un MODULO, se IMPORTAN ESTA y TODAS CON LAS QUE TENGA UUNA RELACION.
+from admin_class import Admin
+
+# Cuando se IMPORTAN VARIAS CLASES de UN MODULO que NO TIENEN RELACION, DEBEN ESPECIFICARSE TODAS ELLAS.
+
+# from admin_class import Admin, Privileges
+
+# Es posible IMPORTARSE TODAS las CLASES de un MODULO DIRECTAMENTE
+# Pero DEBE usarse la SINTAXIS del "nombre_modulo.clase" PARA PODER UTILIZARLAS.
+
+# import admin_class
+
+# SI LAS CLASES QUE VAMOS A NECESITAR SE ENCUENTRAN EN MULTIPLES MODULOS
+# PODEMOS UTILIZAR TANTAS SENTENCIAS DE IMPORTACION COMO NECESITEMOS.
+# INCLUSO CONBINANDO LAS DISTINTAS FORMAS QUE APARECEN ANTERIORMENTE.
+
+administrator = Admin('Javier', 'Ramon', 41, 'Barcelona')
+administrator.privileges.show_privileges()

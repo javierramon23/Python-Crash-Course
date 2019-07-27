@@ -1,5 +1,4 @@
 class User():
-
     def __init__(self, first_name, last_name, age, born):
         self.first_name = first_name
         self.last_name = last_name
@@ -14,20 +13,17 @@ class User():
     def greet_user(self):
         print('Bienvenido {}, ahora estas registrado.'.format(self.first_name))
 
-'''
- BLOQUE de CODIGO COMENTADO PARA EVITAR QUE CUANDO IMPORTEMOS LA CLASE "User"
- SE EJECUTE EL CODIGO EXTERNO A LA CLASE
+class Privileges():
+    def __init__(self):
+        self.privileges = ['can add post', 'can delete post', 'can edit post']
 
-user_one = User('Javier', 'Ramon', 41, 'Barcelona')
-user_two = User('Luis', 'Ramon', 31, 'Teruel')
-user_three = User('Laura', 'Jambrina', 42, 'Teruel')
+    def show_privileges(self):
+        print('Permisos del Usuario:')
+        for privilege in self.privileges:
+            print('- {}'.format(privilege))
 
-user_one.describe_user()
-user_one.greet_user()
-
-user_two.describe_user()
-user_two.greet_user()
-
-user_three.describe_user()
-user_three.greet_user()
-'''
+class Admin(User):
+    def __init__(self, first_name, last_name, age, born):
+        super().__init__(first_name, last_name, age, born)
+        # Para INICIALIZAR el ATRIBUTO se CREA una INSTANCIA de Privileges
+        self.privileges = Privileges()

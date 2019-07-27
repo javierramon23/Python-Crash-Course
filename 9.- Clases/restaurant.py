@@ -1,4 +1,4 @@
-class Restaurant:
+class Restaurant():
 
     def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
@@ -11,6 +11,10 @@ class Restaurant:
     def open_restaurant(self):
         print('Bienvenidos, el restaurante esta ABIERTO')
 
+'''
+ BLOQUE de CODIGO COMENTADO PARA EVITAR QUE CUANDO IMPORTEMOS LA CLASE "Restaurant"
+ SE EJECUTE EL CODIGO EXTERNO A LA CLASE
+
 restaurant = Restaurant('La Menta', 'Tradicional')
 
 print(restaurant.restaurant_name)
@@ -18,3 +22,5 @@ print(restaurant.cuisine_type)
 
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+'''
