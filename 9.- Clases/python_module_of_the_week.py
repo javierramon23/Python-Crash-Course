@@ -1,0 +1,4 @@
+'''
+http://pymotw.com
+
+'''
