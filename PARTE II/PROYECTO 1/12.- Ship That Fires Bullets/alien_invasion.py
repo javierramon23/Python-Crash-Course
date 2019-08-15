@@ -18,6 +18,7 @@ def run_game():
     '''
     # pygame.init() pone en marcha los MODULOS necesarios para su funcionamiento.
     pygame.init()
+
     # Creamos INSTANCIA de la Clase Settings para poder UTILIZAR sus ATRIBUTOS en el juego.
     ai_settings = Settings()
 
@@ -27,15 +28,16 @@ def run_game():
 
     # 'NOMBRE' de la ventana del juego.
     pygame.display.set_caption('Alien Invasion')
+
     #  INSTANCIAMOS un OBJETO SHIP
     ship = Ship(screen)
 
     # LOOP PRINCIPAL DEL JUEGO
     while True:
       # ESCUCHAMOS LOS EVENTOS QUE SE PRODUZCAN en el JUEGO.
-      gf.check_evets()
-      # REDIBUJAMOS y REFRESCAMOS la VENTANA DEL JUEGO.
+      gf.check_evets(ship)
+      # ACTUALIZAMOS la VENTANA DEL JUEGO.
       gf.update_screen(ai_settings, screen, ship)
 
-# Ponemos en EJECUCION ell JUEGO
+# Ponemos en EJECUCION el JUEGO
 run_game()
