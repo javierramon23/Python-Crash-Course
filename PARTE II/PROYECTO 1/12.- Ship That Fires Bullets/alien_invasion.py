@@ -36,6 +36,8 @@ def run_game():
     while True:
       # ESCUCHAMOS LOS EVENTOS QUE SE PRODUZCAN en el JUEGO.
       gf.check_evets(ship)
+      # SE ACTUALIZA EL MOVIMIENTO DE LA NAVE
+      ship.update()
       # ACTUALIZAMOS la VENTANA DEL JUEGO.
       gf.update_screen(ai_settings, screen, ship)
 

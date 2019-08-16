@@ -8,13 +8,22 @@ def check_evets(ship):
         # Respuesta al EVENTO 'Quit'
         if event.type == pygame.QUIT:
             sys.exit()
-        # Respuesta a la PULSACION del CURSOR DERECHO
+        # Respuesta a la PULSACION de UNA TECLA
         elif event.type == pygame.KEYDOWN:
             # Si la TECLA es el CURSOR DERECHO
             if event.key == pygame.K_RIGHT:
-                # SE DESPLAZA LA IMAGEN(SUPERFICIE/RECT) A LA DERECHA
-                # SE ACCEDE AL ATRIBUTO 'rect' DEFINIDO EN LA CLASE
-                ship.rect.centerx += 5
+                ship.moving_right = True
+            # Si la TECLA es el CURSOR IZQUIERDO
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = True
+        # Respuesta a la NO PULSACION de UNA TECLA
+        elif event.type == pygame.KEYUP:
+            # Si la TECLA es el CURSOR DERECHO
+            if event.key == pygame.K_RIGHT:
+                ship.moving_right = False
+            # Si la TECLA es el CURSOR DERECHO
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = False
 
 def update_screen(ai_settings, screen, ship):
     '''ACTUALIZA/REFRESACA la "NUEVA VENTANA" CREADA DESPUES DE POSIBLES "EVENTOS"'''
