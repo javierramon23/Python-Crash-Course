@@ -1,7 +1,7 @@
 import pygame
 
 class Ship():
-
+    """ """
     def __init__(self, screen):
         # Para poder TRABAJAR con la VENTANA de la PANTALLA PRINCIPAL del juego.
         self.screen = screen

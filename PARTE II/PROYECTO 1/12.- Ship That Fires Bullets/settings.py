@@ -1,6 +1,5 @@
 class Settings():
-    '''
-    '''
+    """ """
     def __init__(self):
         '''INICIALIZA LAS PROPIEDADES DEL JUEGO'''
         # PROPIEDADES de la PANTALLA
