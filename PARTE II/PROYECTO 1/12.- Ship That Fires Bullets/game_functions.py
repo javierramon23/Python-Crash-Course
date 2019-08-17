@@ -1,6 +1,24 @@
 import sys
 import pygame
 
+def check_keydown_events(event, ship):
+    """ CONTROLA LOS EVENTOS QUE SUCEDEN AL PULSAR UNA TECLA """
+    # Si la TECLA es el CURSOR DERECHO
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = True
+    # Si la TECLA es el CURSOR IZQUIERDO
+    elif event.key == pygame.K_LEFT:
+        ship.moving_left = True
+
+def check_keyup_events(event, ship):
+    """ CONTROLA LOS EVENTOS QUE SUCEDEN AL SOLTAR UNA TECLA """
+    # Si la TECLA es el CURSOR DERECHO
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = False
+    # Si la TECLA es el CURSOR DERECHO
+    elif event.key == pygame.K_LEFT:
+        ship.moving_left = False
+
 def check_evets(ship):
     '''RESPUESTA a los EVENTOS del TECLADO y RATON'''
     # BUCLE que "ESCUCHA" los EVENTOS que se produzcan durante la ejecución del JUEGO
@@ -10,20 +28,11 @@ def check_evets(ship):
             sys.exit()
         # Respuesta a la PULSACION de UNA TECLA
         elif event.type == pygame.KEYDOWN:
-            # Si la TECLA es el CURSOR DERECHO
-            if event.key == pygame.K_RIGHT:
-                ship.moving_right = True
-            # Si la TECLA es el CURSOR IZQUIERDO
-            elif event.key == pygame.K_LEFT:
-                ship.moving_left = True
+            check_keydown_events(event, ship)
         # Respuesta a la NO PULSACION de UNA TECLA
         elif event.type == pygame.KEYUP:
-            # Si la TECLA es el CURSOR DERECHO
-            if event.key == pygame.K_RIGHT:
-                ship.moving_right = False
-            # Si la TECLA es el CURSOR DERECHO
-            elif event.key == pygame.K_LEFT:
-                ship.moving_left = False
+            check_keyup_events(event, ship)
+            
 
 def update_screen(ai_settings, screen, ship):
     '''ACTUALIZA/REFRESACA la "NUEVA VENTANA" CREADA DESPUES DE POSIBLES "EVENTOS"'''

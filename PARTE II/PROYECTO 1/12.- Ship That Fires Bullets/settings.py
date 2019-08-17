@@ -8,4 +8,4 @@ class Settings():
         self.bg_color = (230, 230, 230)
 
         # PROPIEDADES DE LA NAVA
-        self.ship_speed_factor = 1.5
+        self.ship_speed_factor = 10
