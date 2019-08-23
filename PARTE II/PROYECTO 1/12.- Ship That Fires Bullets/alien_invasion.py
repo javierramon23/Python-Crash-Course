@@ -1,6 +1,6 @@
-'''
+"""
 ESTRUCTURA BASICA DE UN JUEGO ESCRITO EN PYGAME
-'''
+"""
 import pygame
 # Se IMPORTA Settings para poder definir las Propiedades del JUEGO.
 from settings import Settings
