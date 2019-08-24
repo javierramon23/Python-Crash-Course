@@ -9,6 +9,8 @@ from ship import Ship
 # Se IMPORTA el MODULO de FUNCIONES del JUEGO.
 import game_functions as gf
 
+from pygame.sprite import Group
+
 '''
 FUNCION que PONE en EJECUCION el JUEGO
 '''
@@ -29,17 +31,23 @@ def run_game():
     # 'NOMBRE' de la ventana del juego.
     pygame.display.set_caption('Alien Invasion')
 
-    #  INSTANCIAMOS un OBJETO SHIP
+    # INSTANCIAMOS un OBJETO SHIP
     ship = Ship(ai_settings, screen)
+
+    # Creamos UN GRUPO(Sprite) para ALMACENAR las BALAS DISPARADAS.
+    bullets = Group()
 
     # LOOP PRINCIPAL DEL JUEGO
     while True:
       # ESCUCHAMOS LOS EVENTOS QUE SE PRODUZCAN en el JUEGO.
-      gf.check_evets(ship)
+      gf.check_evets(ai_settings, screen, ship, bullets)
       # SE ACTUALIZA EL MOVIMIENTO DE LA NAVE
       ship.update()
+      # SE ACTUALIZA EL MOVIMIENTO DE LAS BALAS
+      # 'update()' de un GRUPO, INVOCA el 'update()' DE CADA ELEMENTO DEL GRUPO.
+      bullets.update()
       # ACTUALIZAMOS la VENTANA DEL JUEGO.
-      gf.update_screen(ai_settings, screen, ship)
+      gf.update_screen(ai_settings, screen, ship, bullets)
 
 # Ponemos en EJECUCION el JUEGO
 run_game()

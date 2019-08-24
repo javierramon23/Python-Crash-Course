@@ -21,7 +21,7 @@ class Ship():
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
 
-        # El ATRIBUTO 'centerx' del los OBJETOS TIPO 'rec' SOLO ALMACENAN VALORES ENTEROS
+        # El ATRIBUTO 'centerx' del los OBJETOS TIPO 'rect' SOLO ALMACENAN VALORES ENTEROS
         # es necesario trabajar con otra VARIABLE para poder TRABAJAR con VALORES FLOAT
         self.center = float(self.rect.centerx)
 

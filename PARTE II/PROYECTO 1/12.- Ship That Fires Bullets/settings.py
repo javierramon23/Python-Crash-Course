@@ -8,3 +8,9 @@ class Settings():
 
         # PROPIEDADES DE LA NAVA
         self.ship_speed_factor = 10
+
+        # PROPIEDADES DE LA MUNICION
+        self.bullet_speed_factor = 10
+        self.bullet_width = 3
+        self.bullet_height = 15
+        self.bullet_color = 60, 60, 60
