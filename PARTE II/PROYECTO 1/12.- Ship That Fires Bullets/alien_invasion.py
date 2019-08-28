@@ -43,9 +43,8 @@ def run_game():
       gf.check_evets(ai_settings, screen, ship, bullets)
       # SE ACTUALIZA EL MOVIMIENTO DE LA NAVE
       ship.update()
-      # SE ACTUALIZA EL MOVIMIENTO DE LAS BALAS
-      # 'update()' de un GRUPO, INVOCA el 'update()' DE CADA ELEMENTO DEL GRUPO.
-      bullets.update()
+      # SE ACTUALIZAN LAS BALAS
+      gf.update_bullets(bullets)
       # ACTUALIZAMOS la VENTANA DEL JUEGO.
       gf.update_screen(ai_settings, screen, ship, bullets)
 
