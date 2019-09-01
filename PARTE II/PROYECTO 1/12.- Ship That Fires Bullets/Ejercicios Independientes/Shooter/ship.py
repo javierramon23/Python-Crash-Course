@@ -1,7 +1,7 @@
 import pygame
 
 class Ship():
-    # screen como parámetro por que trabajaremos con la PANTALLA DENTRO D LA CLASE
+    # screen como parámetro por que trabajaremos con la PANTALLA DENTRO DE LA CLASE
     def __init__(self, screen):
         
         self.screen = screen

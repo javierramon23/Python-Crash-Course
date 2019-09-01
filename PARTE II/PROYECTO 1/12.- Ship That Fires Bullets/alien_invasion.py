@@ -8,7 +8,7 @@ from settings import Settings
 from ship import Ship
 # Se IMPORTA el MODULO de FUNCIONES del JUEGO.
 import game_functions as gf
-
+# Se IMPORTA Group para trabajar con CONJUNTOS de elementos (disparos, aliens, etc.)
 from pygame.sprite import Group
 
 '''
@@ -33,10 +33,13 @@ def run_game():
 
     # INSTANCIAMOS un OBJETO SHIP
     ship = Ship(ai_settings, screen)
-
-    # Creamos UN GRUPO(Sprite) para ALMACENAR las BALAS DISPARADAS.
+    
+    # CREAMOS UN GRUPO(Sprite) para ALMACENAR las BALAS DISPARADAS y los ALIENS.
     bullets = Group()
+    aliens  = Group()
 
+    # CREAMOS la FLOTA DE ALIENS ENEMIGOS
+    gf.create_fleet(ai_settings, screen, aliens)
     # LOOP PRINCIPAL DEL JUEGO
     while True:
       # ESCUCHAMOS LOS EVENTOS QUE SE PRODUZCAN en el JUEGO.
@@ -46,7 +49,7 @@ def run_game():
       # SE ACTUALIZAN LAS BALAS
       gf.update_bullets(bullets)
       # ACTUALIZAMOS la VENTANA DEL JUEGO.
-      gf.update_screen(ai_settings, screen, ship, bullets)
+      gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
 # Ponemos en EJECUCION el JUEGO
 run_game()
