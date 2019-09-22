@@ -39,7 +39,7 @@ def run_game():
     aliens  = Group()
 
     # CREAMOS la FLOTA DE ALIENS ENEMIGOS
-    gf.create_fleet(ai_settings, screen, aliens)
+    gf.create_fleet(ai_settings, screen, aliens, ship)
     # LOOP PRINCIPAL DEL JUEGO
     while True:
       # ESCUCHAMOS LOS EVENTOS QUE SE PRODUZCAN en el JUEGO.
