@@ -1,3 +1,4 @@
+# Se IMPORTAN LAS LIBRERIAS/MODULOS NECESARIOS PARA LA .
 from star import Star
 
 def get_number_stars(screen, star):
